@@ -1,2 +1,2 @@
 discord
-python-env
+python-dotenv
