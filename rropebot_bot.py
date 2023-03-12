@@ -22,9 +22,17 @@ async def on_ready():
 
 @bot.command(name="start", help="Starts a Pomodoro timer")
 async def start_timer(ctx):
-    await ctx.send("Time to work!")
-    await asyncio.sleep(10)
-    await ctx.send("Time to play!")
+    
+    # Bot is sending a first message
+    start_work_em = discord.Embed(title="Time to start working!", color=0x7b165b)
+    await ctx.send(embed = start_work_em)
+    
+    # Countdown will start after the following seconds
+    await asyncio.sleep(3)
+    
+    # Bot is sending ending message
+    start_break_em = discord.Embed(title="Time to rest!", color=0xc555ff)
+    await ctx.send(embed = start_break_em) 
 
 #@client.event
 # async def on_message(message):
