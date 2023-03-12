@@ -34,9 +34,20 @@ async def start_timer(ctx):
     start_break_em = discord.Embed(title="Time to rest!", color=0xc555ff)
     await ctx.send(embed = start_break_em) 
 
+@bot.command(name="stop", help="Stop a Pomodoro timer")
+async def stop_timer(ctx):
+    
+    # Bot is sending a first message
+    stop_work_em = discord.Embed(title="Time to start working!", color=0x7b165b)
+    await ctx.send(embed = stop_work_em)
+
+
+
+
+
 #@client.event
 # async def on_message(message):
-    # if message.author == client.user:
+    # if message.author == client.user: 
     #     return
 
     # if message.content.startswith('$hello'):
