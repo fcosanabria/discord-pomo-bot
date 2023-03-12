@@ -35,7 +35,7 @@ async def start_timer(ctx):
     start_break_em = discord.Embed(title="Time to rest!", color=0xc555ff)
     await ctx.send(embed = start_break_em) 
     
-    """await send()
+    """await ctx.send()
     The await send(embed) comes from the following documentation: https://discordpy.readthedocs.io/en/stable/api.html?highlight=embed#discord.Webhook.send
     
      The await keyword is used to indicate that the code is asynchronous and that the program should wait for the operation to complete before moving on to the next task. ctx likely refers to the context in which the message is being sent, and send is the method being used to send the message.
